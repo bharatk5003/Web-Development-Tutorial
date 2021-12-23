@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>More on Selectors</title>
+  <style>
+    /* if p is right inside then this css will apply */
+    div >p{
+      background-color: yellow;
+      color: black;
+      font-size: 27px;
+    }
+/* if p is right after div means p and div are siblings */
+    div+p{
+      color: white;
+      background-color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>This is a paragraph</p>
+    <div class="item">
+          <ul>
+            <li><p>This is another paragraph</p></li>
+          </ul>
+    </div>
+    <p>This one is direct para</p>
+  </div>
+  <p>This is outer paragraph</p>
+  
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creating animation & Keyframes</title>
+  <style>
+    .container{
+      background-color: yellowgreen;
+    }
+    .box{
+      background-color: green;
+      width: 250px;
+      height: 250px;
+      position: relative;
+      animation-name: bharat1;
+      animation-duration: 2s;
+      animation-iteration-count: 3;
+      /* animation-fill-mode: alternate; */
+      /* animation-timing-function: ease-in-out; */
+      /* animation-delay: 3s; */
+      /* animation-direction: reverse; */
+      /* all in one  Shortend property  */
+   /*   animation: animation-name animation-duration animation-timing-function animation-delay
+      animation-iteration-count animation-fill-mode;   */
+      /* animation: bharat 5s ease-in 1s 12 backwards; */
+
+    }
+
+    @keyframes bharat1{
+0%{
+top: 0px;
+left: 0px;
+}
+40%{
+  top: 250px;
+  left: 0px;
+
+}
+80%{
+  top: 250px;
+  left: 250px;
+
+}
+100%{
+  top: 0px;
+  left: 250px;
+}
+
+    }
+
+    @keyframes bharat{
+from{
+  width: 200px;
+}
+to{
+  width: 400px;
+}
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+<div class="box">
+  This is a Box
+</div>
+
+  </div>
+  
+</body>
+</html>
