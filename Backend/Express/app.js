@@ -1,30 +1,32 @@
-const express=require("express");
-
-const app=express();
-const port=80;
-
-app.use('/')
+const express = require("express");
+const app = express();
+const port = 80;
+const path = require("path");
 
 
-app.get("/",(req,res)=>{
-  res.send("this is my first express app with  Harry hello");
-});
+app.use("/static", express.static("static"));   //For serving static files
 
-app.get("/home",(req,res)=>{
-  res.status(400).send("this is my first express app with  Harry hello");
-});
+//PUG Specific STUFF
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));  //Set the view directory
 
-app.get("/about",(req,res)=>{
-  res.status(200).send("this is my first express app with  Harry hello");
-});
-app.get("/service",(req,res)=>{
-  res.send("this is my first express app with  Harry hello");
-});
 
-app.get("/contact",(req,res)=>{
-  res.send("this is my first express app with  Harry hello");
-});
-
-app.listen(port,()=>{
-  console.log(`This application started successfully on port ${port}`);
+//ENDPoints
+app.get('./',(req,res)=>{
+  res.status(200).render('index.pug',)
 })
+
+
+
+//Our Pug demo end point
+
+
+
+
+
+
+
+
+app.listen(port, () => {
+  console.log(`This application started successfully on port ${port}`);
+});
